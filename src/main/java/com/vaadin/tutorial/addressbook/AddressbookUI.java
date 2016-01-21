@@ -19,7 +19,7 @@ import javax.servlet.annotation.WebServlet;
  * the same instance, add @PreserveOnRefresh.
  */
 @Title("Addressbook")
-@Theme("valo")
+@Theme("reindeer")
 public class AddressbookUI extends UI {
 
 
@@ -73,10 +73,10 @@ public class AddressbookUI extends UI {
         filter.addTextChangeListener(e -> refreshContacts(e.getText()));
 
         contactList.setContainerDataSource(new BeanItemContainer<>(Contact.class));
-        contactList.setColumnOrder("firstName", "lastName", "email");
+        contactList.setColumnOrder("firstName", "lastName", "email", "phone");
         contactList.removeColumn("id");
         contactList.removeColumn("birthDate");
-        contactList.removeColumn("phone");
+        //contactList.removeColumn("phone");
         contactList.setSelectionMode(Grid.SelectionMode.SINGLE);
         contactList.addSelectionListener(e
                 -> contactForm.edit((Contact) contactList.getSelectedRow()));
