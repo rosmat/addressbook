@@ -19,7 +19,7 @@ import javax.servlet.annotation.WebServlet;
  * the same instance, add @PreserveOnRefresh.
  */
 @Title("Addressbook")
-@Theme("reindeer")
+@Theme("valo")
 public class AddressbookUI extends UI {
 
 

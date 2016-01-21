@@ -6,8 +6,7 @@ import com.vaadin.event.ShortcutAction;
 import com.vaadin.tutorial.addressbook.backend.Contact;
 import com.vaadin.ui.*;
 import com.vaadin.ui.Notification.Type;
-//import com.vaadin.ui.themes.ValoTheme;
-import com.vaadin.ui.themes.Reindeer;
+import com.vaadin.ui.themes.ValoTheme;
 
 /* Create custom UI Components.
  *
@@ -43,7 +42,7 @@ public class ContactForm extends FormLayout {
          * With Vaadin built-in styles you can highlight the primary save button
          * and give it a keyboard shortcut for a better UX.
          */
-        save.setStyleName(Reindeer.BUTTON_DEFAULT);
+        save.setStyleName(ValoTheme.BUTTON_PRIMARY);
         save.setClickShortcut(ShortcutAction.KeyCode.ENTER);
         setVisible(false);
     }
